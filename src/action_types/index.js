@@ -1,0 +1,2 @@
+export const ADD_POKEMON = 'ADD_POKEMON';
+export const CHOOSE_POKEMON = 'CHOOSE_POKEMON';
