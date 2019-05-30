@@ -24,8 +24,8 @@ class SelectedPokemon extends Component {
 }
 
 export default connect(state => {
-  const activePokemonId = state.session.activePokemonId;
-  const activePokemon = state.data.pokemon[activePokemonId] || {
+  const selectedPokemonId = state.session.selectedPokemonId;
+  const activePokemon = state.data.pokemon[selectedPokemonId] || {
     species: {},
     sprites: {}
   };

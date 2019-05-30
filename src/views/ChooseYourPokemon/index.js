@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchPokemon } from '../../actions';
+import { fetchRandomPokemon } from '../../actions';
 
 class ChooseYourPokemon extends Component {
   render() {
@@ -42,7 +42,9 @@ class ChooseYourPokemon extends Component {
           man who needs coffee Zangoose Clefable. Scratch Cascade Badge Trubbish
           Sceptile Shiftry Scizor Whimsicott.{' '}
         </p>
-        <button onClick={handleClick}>Choose!</button>
+        <button data-test-id="choose-pokemon" onClick={handleClick}>
+          Choose!
+        </button>
       </div>
     );
   }
@@ -50,5 +52,5 @@ class ChooseYourPokemon extends Component {
 
 export default connect(
   null,
-  { handleClick: fetchPokemon }
+  { handleClick: fetchRandomPokemon }
 )(ChooseYourPokemon);

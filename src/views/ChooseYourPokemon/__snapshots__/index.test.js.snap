@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ChooseYourPokemon /> allows users to select a random pokemon 1`] = `
+<div>
+  <h2>
+    Congrats!
+  </h2>
+  <h3>
+    You have selected raichu!
+  </h3>
+  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png"
+       alt="raichu"
+  >
+</div>
+`;
+
+exports[`<ChooseYourPokemon /> matches snapshot 1`] = `
+<div>
+  <p>
+    Pokem ipsum dolor sit amet Mime Jr Mime Jr Watchog Nidoran Professor Oak Pichu. Thunder Badge Magmortar anim id est laborum Lileep Luvdisc Jellicent Reuniclus. Leech Life Tyrogue Squirtle Fuchsia City Jolteon Masquerain ut enim ad minim veniam. Silver Escape Rope Cloyster Roserade Cradily Feebas Youngster wants to fight. Cerulean City Tentacool gym Purugly Granbull Zweilous Celadon Department Store.
+  </p>
+  <p>
+    Rage Vaporeon Solosis Makuhita Bill Lileep Jigglypuff. Volcano Badge Glaceon Octillery Harden Chandelure Starmie Gulpin. Quis nostrud exercitation ullamco laboris nisi Stunky Shuppet Pachirisu Swadloon Mawile anim id est laborum. Cerulean City Goldeen Water Bronzong Weedle Harden Swanna. Charizard Gorebyss Basculin Milotic Escape Rope Pikachu Gyarados.
+  </p>
+  <p>
+    Anim id est laborum Poliwrath Shaymin Mineral Badge Chimchar Haunter Staravia. Dragon Rage Kricketot Growlithe what kind of Pokemon are you Pinsir Great Ball Oshawott. Pikachu Smoochum Raikou Cleffa Riolu Amoonguss Potion. Growl Abomasnow Blitzle Marill Flaaffy Tangela Smoochum. Gotta catch 'em all Bulbasaur Water Gun Sharpedo to catch them is my real test Poison Maractus.
+  </p>
+  <p>
+    Pewter City Flaaffy Pinsir Riolu Xatu Hydro Pump Cherubi. Sed do eiusmod tempor incididunt Gible Darumaka Cascoon Ekans Haunter Dome Fossil. Bulbasaur Gible Slowpoke Archen Sewaddle Bayleef Celadon Department Store. Pewter City Vanillite Beautifly Alakazam grumpy old man who needs coffee Zangoose Clefable. Scratch Cascade Badge Trubbish Sceptile Shiftry Scizor Whimsicott.
+  </p>
+  <button data-test-id="choose-pokemon">
+    Choose!
+  </button>
+</div>
+`;

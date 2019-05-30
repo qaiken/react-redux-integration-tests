@@ -11,7 +11,7 @@ export function choosePokemon(id) {
   return { type: CHOOSE_POKEMON, payload: id };
 }
 
-export function fetchPokemon() {
+export function fetchRandomPokemon() {
   return dispatch => {
     const randomInt = getRandomInt(151);
 
