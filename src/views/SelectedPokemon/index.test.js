@@ -27,6 +27,8 @@ describe('<SelectedPokemon />', function() {
 
   it('redirects to homepage if there is no selected pokemon', function() {
     const wrapper = makeMountRender(reduxify(SelectedPokemon))();
+
+    wrapper.update();
     expect(window.location.href).toBe('http://localhost/');
   });
 });
