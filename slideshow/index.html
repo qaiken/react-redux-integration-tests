@@ -32,34 +32,33 @@
       <div class="slides">
         <section>FrontEnd Unit / Integration Tests</section>
         <section>
-          <section>Why do we write tests at all?</section>
-          <section>
-            <p>Confidence</p>
-            <ul>
-              <li>that I didn't break anything</li>
-              <li>that my new code works as intended</li>
-            </ul>
-          </section>
+          Agenda
+          <ul>
+            <li>My personal approach to testing (no one right way)</li>
+            <li>React/Redux Demo App</li>
+          </ul>
+        </section>
+        <section>
+          Why do we write tests at all?
+          <ul>
+            <li>confidence that I didn't break any existing code</li>
+            <li>confidence that my new code works as intended</li>
+          </ul>
         </section>
         <section>
           <section>
             <p>Types of tests</p>
             <ul>
               <li>
-                End to End: Testing full blown user flows (<a
-                  href="https://www.cypress.io/"
-                  >cypress</a
-                >, <a href="https://pptr.dev/">puppeteer</a>).
+                End to End: Testing full blown user flows
               </li>
               <li>
                 Integration: Testing interactions between multiple services /
-                components (<a href="https://jestjs.io/">jest</a>,
-                <a href="https://github.com/airbnb/enzyme">enzyme</a>)
+                components
               </li>
               <li>
                 Unit: Testing single component / function in isolation
-                (input/output) (<a href="https://jestjs.io/">jest</a>,
-                <a href="https://github.com/airbnb/enzyme">enzyme</a>)
+                (input/output)
               </li>
             </ul>
           </section>
@@ -68,8 +67,6 @@
             <ul>
               <li>
                 Snapshot: Testing that a component's rendered UI does not change
-                (<a href="https://jestjs.io/">jest</a>,
-                <a href="https://github.com/airbnb/enzyme">enzyme</a>).
               </li>
               <li>
                 Static: Testing pre compile-time (<a
@@ -103,7 +100,7 @@
         <section>
           <section>
             <p>Things to consider</p>
-            <p>static -> unit -> integration -> E2E -> manual</p>
+            <p>unit -> integration -> E2E</p>
             <ul>
               <li>points of potential failure: minimum -> -> -> maximum</li>
               <li>engineering time: minimum -> -> -> maximum</li>
@@ -113,7 +110,7 @@
           </section>
           <section>
             <p>More things to consider</p>
-            <p>static -> unit -> integration -> E2E -> manual</p>
+            <p>unit -> integration -> E2E</p>
             <ul>
               <li>code tested: minimum -> -> -> maximum</li>
               <li># of tests needed: maximum -> -> -> minimum</li>
