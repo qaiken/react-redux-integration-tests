@@ -7,7 +7,7 @@ import Routes from '../Routes';
 import store from '../store';
 import './index.css';
 
-function App() {
+export default function App() {
   return (
     <Provider store={store}>
       <ConnectedRouter history={history}>
@@ -20,5 +20,3 @@ function App() {
     </Provider>
   );
 }
-
-export default App;

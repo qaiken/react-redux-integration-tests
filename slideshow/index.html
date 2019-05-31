@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>FrontEnd Unit / Integration Tests</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/black.css" />
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css" />
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? 'css/print/pdf.css'
+        : 'css/print/paper.css';
+      document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>FrontEnd Unit / Integration Tests</section>
+        <section>
+          <section>Why do we write tests at all?</section>
+          <section>
+            <p>Confidence</p>
+            <ul>
+              <li>that I didn't break anything</li>
+              <li>that my new code works as intended</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <p>Types of tests</p>
+            <ul>
+              <li>
+                End to End: Testing full blown user flows (<a
+                  href="https://www.cypress.io/"
+                  >cypress</a
+                >, <a href="https://pptr.dev/">puppeteer</a>).
+              </li>
+              <li>
+                Integration: Testing interactions between multiple services /
+                components (<a href="https://jestjs.io/">jest</a>,
+                <a href="https://github.com/airbnb/enzyme">enzyme</a>)
+              </li>
+              <li>
+                Unit: Testing single component / function in isolation
+                (input/output) (<a href="https://jestjs.io/">jest</a>,
+                <a href="https://github.com/airbnb/enzyme">enzyme</a>)
+              </li>
+            </ul>
+          </section>
+          <section>
+            <p>Other types</p>
+            <ul>
+              <li>
+                Snapshot: Testing that a component's rendered UI does not change
+                (<a href="https://jestjs.io/">jest</a>,
+                <a href="https://github.com/airbnb/enzyme">enzyme</a>).
+              </li>
+              <li>
+                Static: Testing pre compile-time (<a
+                  href="https://github.com/airbnb/enzyme"
+                  >eslint</a
+                >, <a href="https://www.typescriptlang.org/">typescript</a>)
+              </li>
+              <li>
+                Cross Browser / Visual Regression Testing
+                <ul>
+                  <li>
+                    jest runs in node and uses jsdom which simulates a DOM
+                    environment as if you were in the browser
+                  </li>
+                  <li>
+                    runs unit/integration (
+                    <a href="https://karma-runner.github.io/4.0/index.html"
+                      >karma</a
+                    >) and E2E (<a href="https://saucelabs.com/">saucelabs</a>)
+                    tests in real browser environments
+                  </li>
+                  <li>
+                    primarily focused on CSS (babel/frameworks eliminate JS
+                    concerns)
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <p>Things to consider</p>
+            <ul>
+              <li>static -> unit -> integration -> E2E -> manual</li>
+              <li>points of potential failure: minimum -> -> -> maximum</li>
+              <li>engineering time: minimum -> -> -> maximum</li>
+              <li>cost: minimum -> -> -> maximum</li>
+              <li>speed: fast -> -> -> slow</li>
+            </ul>
+          </section>
+          <section>
+            <p>More things to consider</p>
+            <ul>
+              <li>static -> unit -> integration -> E2E -> manual</li>
+              <li>code tested: minimum -> -> -> maximum</li>
+              <li># of tests needed: minimum -> -> -> maximum</li>
+              <li>confidence: minimum -> -> -> maximum</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <p>Integration Tests</p>
+          <ul>
+            <li>so there are trade-offs at every level</li>
+            <li>
+              key is to maximize confidence while minimizing all other downsides
+              and integration tests are a great compromise
+            </li>
+          </ul>
+        </section>
+        <section>
+          https://twitter.com/kentcdodds
+          <img src="https://pbs.twimg.com/media/DVUoM94VQAAzuws.jpg" />
+        </section>
+        <section>
+          <section>
+            why?
+            <img src="img/actions.png" />
+          </section>
+          <section>
+            huh?
+            <img src="img/props.png" />
+          </section>
+          <section>
+            <img src="img/snapshot.png" />
+          </section>
+          <section>
+            <ul>
+              <li>
+                You should very rarely have to change tests when you refactor
+                code.
+              </li>
+              <li>
+                The more your tests resemble the way your software is actually
+                used, the more confidence they can give you.
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          Demo - React/Redux App
+          <ul>
+            <li>3 tests</li>
+            <li>
+              100% test coverage
+            </li>
+            <li>only 1 thing mocked</li>
+            <img src="img/coverage.png" />
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true }
+        ]
+      });
+    </script>
+  </body>
+</html>
