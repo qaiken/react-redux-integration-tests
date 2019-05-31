@@ -31,11 +31,10 @@ describe('<ChooseYourPokemon />', function() {
 
     history.push('/choose-your-pokemon');
 
+    wrapper.update();
+    wrapper.find('[data-test-id="choose-pokemon"]').simulate('click');
+
     ticks([
-      () => {
-        wrapper.update();
-        wrapper.find('[data-test-id="choose-pokemon"]').simulate('click');
-      },
       () => {
         wrapper.update();
         expect(window.location.href).toBe('http://localhost/selected');

@@ -2,8 +2,7 @@ import {
   makeMountRender,
   mockData,
   reduxify,
-  snapshotify,
-  ticks
+  snapshotify
 } from '../../test-utils';
 import SelectedPokemon from './';
 
@@ -29,12 +28,7 @@ describe('<SelectedPokemon />', function() {
   it('redirects to homepage if there is no selected pokemon', function() {
     const wrapper = makeMountRender(reduxify(SelectedPokemon))();
 
-    ticks([
-      () => {
-        wrapper.update();
-
-        expect(window.location.href).toBe('http://localhost');
-      }
-    ]);
+    wrapper.update();
+    expect(window.location.href).toBe('http://localhost/');
   });
 });
