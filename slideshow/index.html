@@ -103,8 +103,8 @@
         <section>
           <section>
             <p>Things to consider</p>
+            <p>static -> unit -> integration -> E2E -> manual</p>
             <ul>
-              <li>static -> unit -> integration -> E2E -> manual</li>
               <li>points of potential failure: minimum -> -> -> maximum</li>
               <li>engineering time: minimum -> -> -> maximum</li>
               <li>cost: minimum -> -> -> maximum</li>
@@ -113,10 +113,10 @@
           </section>
           <section>
             <p>More things to consider</p>
+            <p>static -> unit -> integration -> E2E -> manual</p>
             <ul>
-              <li>static -> unit -> integration -> E2E -> manual</li>
               <li>code tested: minimum -> -> -> maximum</li>
-              <li># of tests needed: minimum -> -> -> maximum</li>
+              <li># of tests needed: maximum -> -> -> minimum</li>
               <li>confidence: minimum -> -> -> maximum</li>
             </ul>
           </section>
@@ -127,8 +127,8 @@
             <li>so there are trade-offs at every level</li>
             <li>
               key is to maximize confidence while minimizing all other downsides
-              and integration tests are a great compromise
             </li>
+            <li>integration tests are a great compromise</li>
           </ul>
         </section>
         <section>
@@ -145,13 +145,10 @@
             <img src="img/props.png" />
           </section>
           <section>
-            <img src="img/snapshot.png" />
-          </section>
-          <section>
             <ul>
               <li>
                 You should very rarely have to change tests when you refactor
-                code.
+                code. (Don't test implementation details!)
               </li>
               <li>
                 The more your tests resemble the way your software is actually
