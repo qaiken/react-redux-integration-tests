@@ -36,7 +36,7 @@ export const makeStore = (customState = {}) => {
 };
 
 export const reduxify = (Component, props = {}, state = {}) => {
-  function reduxWrap() {
+  return function reduxWrap() {
     return (
       <Provider store={makeStore(state)}>
         <ConnectedRouter history={history}>
@@ -44,12 +44,11 @@ export const reduxify = (Component, props = {}, state = {}) => {
         </ConnectedRouter>
       </Provider>
     );
-  }
-  return reduxWrap;
+  };
 };
 
-export const snapshotify = component => {
-  return component.html();
+export const snapshotify = reactWrapper => {
+  return reactWrapper.html();
 };
 
 export const mocker = apiMock => ({
